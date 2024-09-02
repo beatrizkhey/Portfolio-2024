@@ -90,3 +90,26 @@
 .coluna-esquerda, .coluna-direita {
     padding: 10px;
 }
+
+
+
+
+/* Formulário de Contato */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.coluna1 {
+    width: 30%;
+    padding: 20px;
+    text-align: right;
+    margin-top: 50px;
+} 
+.coluna1 table {
+    display: inline-block; 
+    margin-left: auto; 
+}    
+.coluna2 {
+    width: 70%;
+    padding: 20px;
+}
