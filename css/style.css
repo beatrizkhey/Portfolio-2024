@@ -118,14 +118,6 @@ main a {
     line-height: 1em;
 }
 
-.link {
-    color: var(--cor3);
-    font-size: 1.3em;
-    font-weight: bolder;
-    text-decoration: underline;
-    line-height: 1em;
-}
-
 main img {
     padding: 10px 15px;
     margin-left: auto;
@@ -158,12 +150,32 @@ section h2 {
     border-radius: 10px;
 }
 
+footer {
+    background-color: var(--cor3);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor2);
+}
+
 ul.indent {
     text-indent: 20px;
     list-style-position: inside;
     line-height: 1.5em;
 }
 
+/* Tabela Formação */
 table {
     border-collapse: collapse; 
   }
@@ -184,6 +196,9 @@ table {
     font-size: 24px;
     margin-right: 10px;
   }
+  table p {
+    text-align: justify;
+  }
 
 .formacao td:first-child {
   width: 10%; 
@@ -193,27 +208,28 @@ table {
   width: 80%; 
 }
 
-footer {
-    background-color: var(--cor3);
-    color: white;
-    text-align: center;
-    font-size: 0.8em;
-    padding: 5px;
+.formacao tr {
+    border-bottom: 1px solid var(--cor2);
 }
 
-footer a {
-    color: white;
-    font-weight: bolder;
-    text-decoration: none;
+.linha-superior {
+    display: grid;
+    grid-template-columns: 30% 70%;
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: var(--cor2);
+.coluna-esquerda, .coluna-direita {
+    padding: 10px;
 }
 
-/* NOVAS CONFIGURAÇÕES */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 260px;
+}
 
+/* Botões*/
 .botao {
     display: inline-block;
     outline: 0;
@@ -255,7 +271,15 @@ footer a:hover {
     color: var(--cor3);
 }
 
-/* Div */
+.link {
+    color: var(--cor3);
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-decoration: underline;
+    line-height: 1em;
+}
+
+/* Formulário de Contato */
 .container {
     display: flex;
     flex-direction: row;
@@ -341,4 +365,22 @@ label {
     border-color: var(--cor3);
     outline: 0;
     background-color: #ffffff;
+  }
+
+/* Responsividade da tabela sobre */
+@media (max-width: 768px) {
+    table.sobre {
+      display: block;
+    }
+    tr.linha-superior, td.coluna-esquerda, td.coluna-direita {
+      display: block;
+      max-width: fit-content;
+    }
+    img.img-responsive {
+      max-width: fit-content;
+      height: auto;
+    }
+    td.coluna-direita {
+      padding: 20px;
+    }
   }
