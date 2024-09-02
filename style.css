@@ -71,36 +71,59 @@ nav > a:hover {
 main {
     min-width: 300px;
     max-width: 1000px;
+    background-color: var(--cor0);
     margin: auto;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: var(--cor0);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.400);
     border-radius: 10px;
-    text-indent: 20px;
+    text-align: left;
 }
 
 main h1 {
     color: var(--cor3);
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 1.7em;
     text-decoration: none;
     line-height: 2em;
     border-radius: 10px;
+    text-align: left;
+}
+
+main h2 {
+    color: var(--cor3);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    line-height: 1.8em;
+    border-radius: 8px;
+    text-align: left;
+}
+
+main h3 {
+    color: var(--cor3);
+    font-weight: 600;
+    font-size: 1.3em;
+    text-decoration: none;
+    line-height: 1.6em;
+    border-radius: 5px;
+    text-align: left;
 }
 
 main a {
-    color: var(--cor4);
-    font-size: larger;
+    color: var(--cor3);
     font-weight: bold;
     text-decoration: none;
-    line-height: 1.5em;
+    line-height: 1em;
 }
 
-main a:hover {
+.link {
+    color: var(--cor3);
+    font-size: 1.3em;
+    font-weight: bolder;
     text-decoration: underline;
-    color: var(--cor2);
+    line-height: 1em;
 }
 
 main img {
@@ -141,11 +164,33 @@ ul.indent {
     line-height: 1.5em;
 }
 
-table, th, td {
-    margin: 25px;
-    padding: 5px;
-    border: 1px solid var(--cor3);
-    text-align: center;
+table {
+    border-collapse: collapse; 
+  }
+  
+  table tr td {
+    padding: 10px;
+  }
+  
+  table tr td:first-child {
+    text-align: right;
+  }
+  
+  table tr td:last-child {
+    text-align: left
+  }
+  
+  table tr td i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+.formacao td:first-child {
+  width: 10%; 
+}
+
+.formacao td:last-child {
+  width: 80%; 
 }
 
 footer {
@@ -166,3 +211,134 @@ footer a:hover {
     text-decoration: underline;
     color: var(--cor2);
 }
+
+/* NOVAS CONFIGURAÇÕES */
+
+.botao {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 17px 30px;
+    border: 5px solid var(--cor2);
+    color: var(--cor2);
+    font-size: 1.5em;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
+    transition: background, color 0.1s ease-in-out;
+}
+
+.botao:hover {
+    background-color: var(--cor2);
+    color: var(--cor3);
+}
+
+.submit {
+    display: block;
+    margin: 0 auto; 
+    width: 150px;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 2px solid var(--cor3);
+    color: var(--cor3);
+    font-size: 14px;
+    background: transparent;
+    font-weight: 700;
+    line-height: 30px;
+    transition: background, color 0.1s ease-in-out;
+  }
+.submit:hover {
+    background-color: var(--cor2);
+    color: var(--cor3);
+}
+
+/* Div */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.coluna1 {
+    width: 30%;
+    padding: 20px;
+    text-align: right;
+    margin-top: 50px;
+} 
+.coluna1 table {
+    display: inline-block; 
+    margin-left: auto; 
+}    
+.coluna2 {
+    width: 70%;
+    padding: 20px;
+}
+
+
+/* Formulário */
+label {
+    margin-bottom: 2pt;
+    display: block;
+    text-align: left;
+    color: var(--cor3);
+    font-size: 1em;
+    padding-left: 0pt;
+  }
+  
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"] {
+    appearance: none;
+    border: 1px solid #eee;
+    width: 90%;
+    transition: 0.7s;
+    color: #111;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding: 10pt 20pt;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    margin-bottom: 1.4em;
+    display: block;
+  }
+  
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus {
+    border-color: var(--cor3);
+    outline: 0;
+    background-color: #ffffff;
+  }
+  
+  textarea {
+    appearance: none;
+    border: 1px solid #eee;
+    width: 90%;
+    transition: 0.7s;
+    color: var(--cor3);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding: 12pt 24pt;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    margin-bottom: 1.4em;
+    display: block;
+    resize: none;
+    min-height: 6em;
+    outline: 0;
+  }
+  
+  textarea:focus {
+    border-color: var(--cor3);
+    outline: 0;
+    background-color: #ffffff;
+  }

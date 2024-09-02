@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <title>Beatriz Khey por Beatriz Khey</title>
 </head>
 <body>
@@ -24,10 +25,39 @@
         <a href="contato.html" target="_self" rel="next">Contato</a>
     </nav>
     <main>
-        <h1>Contato</h1>
-        <!---Conteúdo-->
-
-        <a href="index.html" target="_self" el="prev">Voltar</a>
+        <div class="container">
+            <div class="coluna1">
+                <table>
+                    <tr>
+                        <td><a href="https://github.com/beatrizkhey">Beatriz Khey</a></td>
+                        <td><i class="fa-brands fa-github"></i></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.linkedin.com/in/beatrizkhey/">Beatriz Khey</a></td>
+                        <td><i class="fa-brands fa-linkedin"></i></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.instagram.com/beatrizkheycrochet/">Beatriz Khey Crochet</a></td>
+                        <td><i class="fa-brands fa-instagram"></i></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="coluna2">
+                <h1>Contato</h1>
+                <form>
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        
     </main>
     <footer>
         <p>Site criado por <a href="https://github.com/beatrizkhey?tab=repositories" target="_blank" rel="external">Beatriz Khey </a>&#xA9;</p>
